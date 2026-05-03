@@ -42,7 +42,7 @@ print_warning() {
 # Default values
 INSTALL_DIR="$HOME/.claude/skills"
 BACKUP_DIR="$HOME/.claude/skills.backup.$(date +%Y%m%d_%H%M%S)"
-CLONE_DIR="/tmp/ai-sdlc-skills.$$"
+CLONE_DIR="/tmp/hyperbrain-skills.$$"
 SKIP_BACKUP=false
 ASSISTANT="claude"
 
@@ -89,7 +89,7 @@ ${YELLOW}Skills Included:${NC}
     - MQTT, Kafka, InfluxDB, IoT Architecture
 
 ${YELLOW}Documentation:${NC}
-    https://github.com/itsatif/ai-sdlc-skills
+    https://github.com/itsatif/hyperbrain-skills
 
 EOF
 }
@@ -159,7 +159,7 @@ main() {
 
     # Clone repository
     print_info "Cloning AI-SDLC skills library..."
-    git clone --depth 1 https://github.com/itsatif/ai-sdlc-skills.git "$CLONE_DIR"
+    git clone --depth 1 https://github.com/itsatif/hyperbrain-skills.git "$CLONE_DIR"
     print_success "Repository cloned"
 
     # Create installation directory
@@ -243,7 +243,7 @@ EOF
     echo "  3. Ask any question to activate AI Superpowers brainstorming"
     echo ""
     print_info "Documentation:"
-    echo "  ${BLUE}https://github.com/itsatif/ai-sdlc-skills${NC}"
+    echo "  ${BLUE}https://github.com/itsatif/hyperbrain-skills${NC}"
     echo ""
     print_info "Skills installed:"
     list_installed_skills

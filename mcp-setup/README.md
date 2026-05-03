@@ -25,7 +25,7 @@ This skill provides a complete setup system for MCP servers, enabling AI assista
 
 ```bash
 # Navigate to mcp-setup directory
-cd /path/to/ai-sdlc-skills/mcp-setup
+cd /path/to/hyperbrain-skills/mcp-setup
 
 # Run automated setup script
 ./setup-mcp.sh
@@ -497,7 +497,7 @@ Before using MCP servers:
 ## 📞 Support
 
 **Documentation:** See SKILL.md for detailed usage instructions
-**Issues:** https://github.com/itsatif/ai-sdlc-skills/issues
+**Issues:** https://github.com/itsatif/hyperbrain-skills/issues
 
 ---
 

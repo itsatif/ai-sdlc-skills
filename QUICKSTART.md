@@ -11,7 +11,7 @@
 
 ```bash
 # One-command installation
-curl -sSL https://raw.githubusercontent.com/itsatif/ai-sdlc-skills/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/itsatif/hyperbrain-skills/main/install.sh | bash
 
 # Restart your AI assistant
 # Skills are now active!
@@ -303,6 +303,6 @@ Your AI assistant now has:
 
 ## 📞 Support
 
-**Issues:** https://github.com/itsatif/ai-sdlc-skills/issues
+**Issues:** https://github.com/itsatif/hyperbrain-skills/issues
 **Author:** Atif Salafi <atif8486@gmail.com>
 **Organization:** DeJoule / Smart Joules

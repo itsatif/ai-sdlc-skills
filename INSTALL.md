@@ -10,8 +10,8 @@
 
 ```bash
 # Clone and run installer
-git clone https://github.com/itsatif/ai-sdlc-skills.git /tmp/ai-sdlc-skills
-cd /tmp/ai-sdlc-skills
+git clone https://github.com/itsatif/hyperbrain-skills.git /tmp/hyperbrain-skills
+cd /tmp/hyperbrain-skills
 ./install.sh
 
 # Skills are now active! Restart your AI assistant.
@@ -21,7 +21,7 @@ cd /tmp/ai-sdlc-skills
 
 ```bash
 # Clone repository
-git clone https://github.com/itsatif/ai-sdlc-skills.git ~/.claude/skills
+git clone https://github.com/itsatif/hyperbrain-skills.git ~/.claude/skills
 
 # Restart Claude Code
 # Skills are automatically active
@@ -149,8 +149,8 @@ git pull origin main
 
 # Or re-run installer
 cd /tmp
-git clone https://github.com/itsatif/ai-sdlc-skills.git
-cd ai-sdlc-skills
+git clone https://github.com/itsatif/hyperbrain-skills.git
+cd hyperbrain-skills
 ./install.sh --skip-backup
 ```
 
@@ -170,7 +170,7 @@ mv ~/.claude/skills ~/.claude/skills.old
 
 ## 📚 Documentation
 
-- **Full Documentation:** https://github.com/itsatif/ai-sdlc-skills
+- **Full Documentation:** https://github.com/itsatif/hyperbrain-skills
 - **Skills Index:** See individual SKILL.md files
 - **Examples:** Check README.md for workflow examples
 
@@ -268,8 +268,8 @@ AI: "Great! Here's the implementation plan:
 
 ## 📞 Support
 
-- **Issues:** https://github.com/itsatif/ai-sdlc-skills/issues
-- **Discussions:** https://github.com/itsatif/ai-sdlc-skills/discussions
+- **Issues:** https://github.com/itsatif/hyperbrain-skills/issues
+- **Discussions:** https://github.com/itsatif/hyperbrain-skills/discussions
 - **Email:** atif8486@gmail.com
 
 ---

@@ -2,7 +2,7 @@
 
 **Version:** 1.0.0
 **Last Updated:** 2026-05-03
-**Repository:** https://github.com/itsatif/ai-sdlc-skills
+**Repository:** https://github.com/itsatif/hyperbrain-skills
 **Author:** Atif Salafi <atif8486@gmail.com>
 
 ---
@@ -212,13 +212,13 @@ describe('SEC Widget E2E Tests', () => {
 
 ### Quick Install (One Command)
 ```bash
-curl -sSL https://raw.githubusercontent.com/itsatif/ai-sdlc-skills/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/itsatif/hyperbrain-skills/main/install.sh | bash
 ```
 
 ### Manual Install
 ```bash
 # Clone repository
-git clone https://github.com/itsatif/ai-sdlc-skills.git ~/.claude/skills
+git clone https://github.com/itsatif/hyperbrain-skills.git ~/.claude/skills
 
 # Install for specific assistant
 cd ~/.claude/skills
@@ -397,8 +397,8 @@ All skills and knowledge bases are:
 
 **Author:** Atif Salafi <atif8486@gmail.com>
 **Organization:** DeJoule / Smart Joules
-**Repository:** https://github.com/itsatif/ai-sdlc-skills
-**Issues:** https://github.com/itsatif/ai-sdlc-skills/issues
+**Repository:** https://github.com/itsatif/hyperbrain-skills
+**Issues:** https://github.com/itsatif/hyperbrain-skills/issues
 
 ---
 

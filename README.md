@@ -1,11 +1,11 @@
-# AI-SDLC Skills Library
+# HyperBrain Skills Library
 
-[![Install](https://github.com/itsatif/ai-sdlc-skills/actions/workflows/install.yml/badge.svg)](https://github.com/itsatif/ai-sdlc-skills/blob/main/INSTALL.md)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/itsatif/ai-sdlc-skills/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/itsatif/ai-sdlc-skills?style=social)](https://github.com/itsatif/ai-sdlc-skills)
+[![Install](https://github.com/itsatif/hyperbrain-skills/actions/workflows/install.yml/badge.svg)](https://github.com/itsatif/hyperbrain-skills/blob/main/INSTALL.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/itsatif/hyperbrain-skills/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/itsatif/hyperbrain-skills?style=social)](https://github.com/itsatif/hyperbrain-skills)
 
 **Author:** Atif Salafi <atif8486@gmail.com>
-**Purpose:** Complete AI-SDLC skill library for full-stack software development
+**Purpose:** Complete AI-powered skill library for full-stack software development
 **Version:** 2.0.0
 **Last Updated:** 2026-05-03
 
@@ -15,11 +15,11 @@
 
 ```bash
 # One-command installation
-curl -sSL https://raw.githubusercontent.com/itsatif/ai-sdlc-skills/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/itsatif/hyperbrain-skills/main/install.sh | bash
 
 # Or clone and install
-git clone https://github.com/itsatif/ai-sdlc-skills.git /tmp/ai-sdlc-skills
-cd /tmp/ai-sdlc-skills && ./install.sh
+git clone https://github.com/itsatif/hyperbrain-skills.git /tmp/hyperbrain-skills
+cd /tmp/hyperbrain-skills && ./install.sh
 
 # Skills are now active! Restart your AI assistant.
 ```
@@ -252,7 +252,7 @@ Skills: tdd-workflow, testing-strategies, e2e-testing, performance-testing, secu
 
 ```bash
 # Clone to Claude skills directory
-git clone https://github.com/itsatif/ai-sdlc-skills.git ~/.claude/skills/
+git clone https://github.com/itsatif/hyperbrain-skills.git ~/.claude/skills/
 
 # Skills are immediately available in Claude Code
 ```
@@ -261,10 +261,10 @@ git clone https://github.com/itsatif/ai-sdlc-skills.git ~/.claude/skills/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/itsatif/ai-sdlc-skills.git ~/ai-sdlc-skills
+git clone https://github.com/itsatif/hyperbrain-skills.git ~/hyperbrain-skills
 
 # 2. Copy to Claude skills
-cp -r ~/ai-sdlc-skills/* ~/.claude/skills/
+cp -r ~/hyperbrain-skills/* ~/.claude/skills/
 
 # 3. Restart Claude Code
 # Skills are now active
@@ -317,7 +317,7 @@ Follow complete AI-SDLC workflow."
 
 ### Skill Organization
 ```
-ai-sdlc-skills/
+hyperbrain-skills/
 ├── README.md                      # This file
 ├── 00-core/                       # Core skills (always loaded)
 │   ├── product-development/
@@ -360,7 +360,7 @@ Enable AI assistants to access external services (Notion, Figma, GitHub, Slack, 
 
 ```bash
 # Navigate to MCP setup directory
-cd ai-sdlc-skills/mcp-setup
+cd hyperbrain-skills/mcp-setup
 
 # Run automated setup
 ./setup-mcp.sh
@@ -498,10 +498,10 @@ origin: DeJoule
 
 ## 🔗 Links
 
-- **Repository:** [GitHub Repository](https://github.com/itsatif/ai-sdlc-skills)
+- **Repository:** [GitHub Repository](https://github.com/itsatif/hyperbrain-skills)
 - **Installation:** [Installation Guide](INSTALL.md)
-- **Documentation:** [Full Documentation](https://github.com/itsatif/ai-sdlc-skills/blob/main/README.md)
-- **Issues:** [Report Issues](https://github.com/itsatif/ai-sdlc-skills/issues)
+- **Documentation:** [Full Documentation](https://github.com/itsatif/hyperbrain-skills/blob/main/README.md)
+- **Issues:** [Report Issues](https://github.com/itsatif/hyperbrain-skills/issues)
 
 ---
 

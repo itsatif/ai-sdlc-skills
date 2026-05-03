@@ -1,12 +1,12 @@
 {
-  "name": "ai-sdlc-skills",
+  "name": "hyperbrain-skills",
   "version": "2.0.0",
   "description": "Comprehensive AI-SDLC skills library for Claude Code, Cursor, Copilot, and other AI coding assistants",
   "author": "Atif Salafi <atif8486@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/itsatif/ai-sdlc-skills.git"
+    "url": "https://github.com/itsatif/hyperbrain-skills.git"
   },
   "keywords": [
     "ai",

@@ -175,7 +175,7 @@ Each knowledge base includes a `KNOWLEDGE_GRAPH.json` file with:
 
 ```bash
 # Clone repository
-git clone https://github.com/itsatif/ai-sdlc-skills.git ~/.claude/skills
+git clone https://github.com/itsatif/hyperbrain-skills.git ~/.claude/skills
 
 # All knowledge bases included automatically
 cd ~/.claude/skills
@@ -187,10 +187,10 @@ ls -la */SKILL.md */KNOWLEDGE_GRAPH.json
 ```bash
 # Install only Backend knowledge
 mkdir -p ~/.claude/skills
-cp -r ai-sdlc-skills/backend-knowledge-base/* ~/.claude/skills/
+cp -r hyperbrain-skills/backend-knowledge-base/* ~/.claude/skills/
 
 # Install only IoT knowledge
-cp -r ai-sdlc-skills/iot-knowledge-base/* ~/.claude/skills/
+cp -r hyperbrain-skills/iot-knowledge-base/* ~/.claude/skills/
 ```
 
 ---
