@@ -588,25 +588,136 @@ SENTRY_ENDPOINT=https://sentry.example.com
 
 ---
 
-## 🔍 Troubleshooting
+## 🔍 Troubleshooting & Automatic Error Handling
+
+### Automatic Error Detection and Fixes
+
+The installer includes **intelligent error detection and automatic fixes** for common issues:
+
+#### 1. Missing Node.js
+
+```bash
+❌ Node.js not found
+🔧 Fixing: Node.js not installed
+
+Detected macOS. Recommending Homebrew installation...
+To install Node.js on macOS:
+  1. Install Homebrew (if not installed)
+  2. Install Node.js: brew install node
+
+Attempt automatic Homebrew installation? [y/N]: y
+✅ Node.js installed successfully
+```
+
+#### 2. Node.js Version Too Old
+
+```bash
+❌ Node.js version 16 is too old (need 18+)
+🔧 Fixing: Node.js version too old
+ℹ️  nvm detected. Upgrading Node.js...
+✅ Upgraded to Node.js 18.17.0
+```
+
+#### 3. Permission Denied
+
+```bash
+❌ Permission denied for: npm install
+🔧 Fixing: Permission denied
+ℹ️  npm permission error. Attempting fixes...
+
+Try installing with sudo? [y/N]: y
+🔄 Retrying: Running npm install with sudo...
+✅ Package installed successfully
+
+# OR alternative fix:
+🔧 Fixing: Permission denied
+ℹ️  Alternative: Fix npm permissions to avoid sudo
+Apply this fix now? [y/N]: y
+✅ npm permissions fixed
+```
+
+#### 4. Network Errors
+
+```bash
+❌ Network error: Connection timeout
+🔧 Fixing: Network connectivity issue
+ℹ️  Checking network connectivity...
+✅ Internet connectivity OK
+ℹ️  Proxy detected: http_proxy=http://proxy.example.com:8080
+Configure npm proxy now? [y/N]: y
+✅ npm proxy configured
+🔄 Retrying: Installing package...
+✅ Package installed successfully
+```
+
+#### 5. Invalid Configuration JSON
+
+```bash
+❌ Configuration validation failed: Invalid JSON in settings.json
+🔧 Fixing: Configuration validation issue
+ℹ️  Attempting to fix JSON syntax...
+✅ JSON syntax fixed
+```
+
+#### 6. Retry Mechanism
+
+Failed operations are **automatically retried** with exponential backoff:
+
+```bash
+📦 Installing @modelcontextprotocol/server-notion...
+❌ Attempt 1/3 failed. Retrying in 1s...
+🔄 Retrying: Attempt 2/3...
+❌ Attempt 2/3 failed. Retrying in 2s...
+🔄 Retrying: Attempt 3/3...
+✅ Installation successful
+```
+
+### Error Summary
+
+At the end of installation, you'll see a comprehensive error summary:
+
+```bash
+════════════════════════════════════════════════════════════
+📊 Installation Summary
+════════════════════════════════════════════════════════════
+
+⚠️  Encountered 3 error(s):
+
+  • [NODE_VERSION_OLD] Node.js version 16 is too old
+  • [JQ_NOT_FOUND] jq not found (optional but recommended)
+  • [PERMISSION_DENIED] Permission denied for npm install
+
+✅ Fixed 3 error(s):
+
+  ✅ NODE_VERSION_OLD
+  ✅ JQ_NOT_FOUND
+  ✅ PERMISSION_DENIED
+
+✅ All errors were automatically fixed!
+```
+
+### Manual Fixes
+
+If automatic fixes don't work, try these manual solutions:
 
 ### Issue: "Claude settings not found"
 
 ```bash
 # Solution: Specify custom settings path
-/mcp-installer install --claude-settings ~/custom-location/settings.json
+./mcp-installer/bin/install-mcps.sh install --claude-settings ~/custom-location/settings.json
 
 # Or create default settings
 mkdir -p ~/.claude
 echo '{}' > ~/.claude/settings.json
 ```
 
-### Issue: "Node.js not found"
+### Issue: "Node.js not found" (Manual Install)
 
 ```bash
-# Solution: Install Node.js
+# Solution: Install Node.js manually
 # Using nvm (recommended)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc  # or source ~/.zshrc
 nvm install 18
 nvm use 18
 
@@ -626,12 +737,27 @@ npm --version
 brew install python@3.11
 
 # Linux (Ubuntu/Debian)
-sudo apt-get update
 sudo apt-get install python3.11 python3-pip
 
 # Verify installation
 python3 --version
 pip3 --version
+```
+
+### Issue: "jq not found" (Optional but Recommended)
+
+```bash
+# macOS
+brew install jq
+
+# Linux (Ubuntu/Debian)
+sudo apt-get install jq
+
+# Linux (Fedora)
+sudo dnf install jq
+
+# Verify installation
+jq --version
 ```
 
 ### Issue: "MCP server connection failed"
@@ -644,21 +770,10 @@ ping morpheus.example.com
 env | grep -E "(NOTION|GITHUB|SLACK|FIGMA|SENTRY)"
 
 # Solution 3: Test specific MCP
-/mcp-installer test morpheus --verbose
+./mcp-installer/bin/install-mcps.sh test morpheus --verbose
 
 # Solution 4: Check firewall/proxy settings
 # Ensure MCP server URLs are accessible
-```
-
-### Issue: "Permission denied"
-
-```bash
-# Solution: Use sudo for global npm installs
-sudo npm install -g @modelcontextprotocol/server-notion
-
-# Or configure npm to use user directory
-npm config set prefix ~/.npm-global
-export PATH=~/.npm-global/bin:$PATH
 ```
 
 ---
