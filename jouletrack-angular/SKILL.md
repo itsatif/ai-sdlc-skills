@@ -729,6 +729,69 @@ export class MyFeatureModule { }
 
 ---
 
+## 🔄 Common PR Feedback Patterns
+
+### Code Quality Issues
+
+**Remove console.log statements**
+- ✅ Use `console.error` for errors only
+- ❌ Remove all `console.log` statements from production code
+- Use proper logging services for production debugging
+
+**Comment style and documentation**
+- ✅ Use JSDoc style (`/** */`) for function documentation
+- ❌ Don't use verbose section comments like `// ─── Section ───`
+- Keep comments short and readable - don't write essays in comments
+- Remove all commented-out code before PR
+
+**Optional chaining vs validation**
+- ✅ Use `configurator.isValidValue()` for array/object validation instead of optional chaining
+- ❌ Don't use `?.data?.filter()` - use proper validation
+- Example: `configurator.isValidValue(data) ? data.filter(...) : []`
+
+**Type safety**
+- ✅ Always add explicit types to variables
+- ✅ Use null coalescing operator (`??`) for fallback values
+- ❌ Don't leave variables untyped
+- Example: `const siteId: string | null = this.offlineConfigService.siteId ?? 'default';`
+
+**Service configuration**
+- ✅ Use `providedIn: 'root'` for singleton services
+- ❌ Don't add singleton services to module `providers: []`
+- If service is `providedIn: 'root'`, it's redundant to add to module providers
+
+### Configuration and Constants
+
+**Constants cleanup**
+- ✅ Remove commented-out values (they're not being used)
+- ❌ Don't leave code commented out - either use it or remove it
+- Example: If `'suh-hyd'` is commented in excludeSites array, remove it entirely
+
+**Keep it simple**
+- ✅ Remove verbose explanatory comments from constants files
+- ✅ Make code self-documenting with good naming
+- ❌ Don't add essays explaining temporary values
+
+### File Organization
+
+**Documentation files**
+- ✅ Remove temporary documentation files from codebase
+- ❌ Don't commit design docs, implementation plans, or QA test plans
+- Keep documentation in wiki, not in `docs/` folder
+
+**HTML templates**
+- ✅ Remove all commented-out HTML
+- ❌ Don't leave commented UI elements in templates
+
+### Build Artifacts
+
+**ngsw-config.json**
+- ✅ Let Angular CLI manage service worker config
+- ❌ Don't manually modify hash values in ngsw-config.json
+- This file should not be in PR diffs (it's a build artifact)
+
+---
+
 ## ✅ Quality Checklist
 
 Before marking code complete:
